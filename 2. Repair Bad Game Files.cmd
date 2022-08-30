@@ -44,6 +44,7 @@ for /F "usebackq tokens=*" %%a in ("%integrity_report%") do (
 	    set /A file_count=!file_count! + 1
 	)
 )
+
 if not %file_count%==0 (
 	echo Total download: %file_count% file^(s^).
 	%bin%\cecho.exe {\n}Downloaded files are stored in {teal}%download_dir%{#}{\n}
